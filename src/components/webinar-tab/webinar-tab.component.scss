@@ -1,0 +1,138 @@
+.section-header {
+    margin-top: 25px;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.tablet-desktop-header-elements {
+    display: none;
+}
+
+.mobile-header-elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.mobile-header-elements span {
+    font-weight: 500;
+    font-size: 18px;
+    margin-left: 10px;
+}
+
+.mobile-header-elements .back-arrow {
+    width: 24px;
+    height: 24px;
+}
+
+.mobile-filter-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.mobile-filter-icons .search-icon,
+.mobile-filter-icons .filter-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.header-tabs ul {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0
+}
+
+.header-tabs ul li a {
+    text-decoration: none;
+    color: #b7b5b5;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 4px;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.header-tabs ul li a.active {
+    color: #000;
+}
+
+.header-tabs ul li a.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+}
+@media (min-width: 577px) {
+    .mobile-header-elements {
+        display: none;
+    }
+
+    .header-tabs ul {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+    .tablet-desktop-header-elements {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section-header h2 {
+        font-size: 1.2rem;
+        color: #444242;
+        margin: 0;
+        line-height: 1;
+    }
+    
+    .tablet-filter-icon {
+        display: block;
+    }
+    
+    .header-tabs {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .header-tabs ul {
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 769px) {
+    .section-header {
+        padding-left: 2rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .section-header {
+        padding: 0 1rem;
+    }
+    
+    .tablet-desktop-header-elements {
+        justify-content: flex-start;
+        gap: 50px;
+    }
+
+    .tablet-filter-icon {
+        display: none; 
+    }
+}

@@ -1,0 +1,26 @@
+<div *ngIf="isMobileOrTablet">
+    <app-webinar-tab (tabChanged)="onTabChanged($event)"></app-webinar-tab>
+</div>
+<div class="default-components" *ngIf="!activeTab || !isMobileOrTablet">
+    <app-live-webinar></app-live-webinar>
+    <app-upcoming-webinars></app-upcoming-webinars>
+    <app-continue-watching></app-continue-watching>
+    <app-webinars-based-cardiology></app-webinars-based-cardiology>
+    <app-top-speakers></app-top-speakers>
+    <app-browse-by-topic></app-browse-by-topic>
+    <app-webinars-may-like></app-webinars-may-like>
+    <app-webinar-tab (tabChanged)="onTabChanged($event)"></app-webinar-tab>
+</div>
+<div class="tab-components" *ngIf="activeTab && isMobileOrTablet">
+    <div *ngIf="activeTab === 'forYou'">
+        <app-webinars-cards></app-webinars-cards>
+        <app-upcoming-webinars></app-upcoming-webinars>
+        <app-continue-watching></app-continue-watching>
+    </div>
+    <div *ngIf="activeTab === 'live'">
+        <app-live-webinar></app-live-webinar>
+    </div>
+    <div *ngIf="activeTab === 'upcoming'">
+        <app-upcoming-webinars></app-upcoming-webinars>
+    </div>
+</div>

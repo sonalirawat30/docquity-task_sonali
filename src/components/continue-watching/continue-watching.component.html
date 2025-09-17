@@ -1,0 +1,27 @@
+<app-section-component class="align-header"
+  title="Continue Watching" 
+  viewAllLink="/continue-watching" 
+  viewAllText="View all">
+</app-section-component>
+<section class="webinars-section align-section">
+  <div class="webinars-grid">
+    <article class="webinar-card" *ngFor="let webinar of webinars">
+      <div class="card-thumbnail">
+        <img [src]="webinar.imageUrl" [alt]="webinar.title">
+        <div class="progress-bar">
+          <div class="progress" [style.width.%]="webinar.watchedPercent"></div>
+        </div>
+        <div class="thumbnail-overlay bottom">
+          <span class="duration-badge">{{ webinar.duration }}</span>
+        </div>
+      </div>
+
+      <div class="card-content">
+        <h3 class="card-title">{{ webinar.title }}</h3>
+        <div class="organization-info">
+          <p>{{ webinar.organization }} {{webinar.timeLeft}}</p>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>

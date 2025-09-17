@@ -1,0 +1,23 @@
+<app-section-component class="align-header"
+  title="Top Speakers" 
+  viewAllLink="/utop-speakers" 
+  viewAllText="View all">
+</app-section-component>
+<div class="webinars-section align-section">
+  <div class="webinars-grid">
+    <div class="speakers-list">
+      <div class="speaker-card" *ngFor="let speaker of speakers" [ngClass]="{ 'live': speaker.isLive }">
+        <div class="profile-pic-container">
+          <img [src]="speaker.imageUrl" [alt]="speaker.name">
+          <div class="live-badges" *ngIf="speaker.isLive">
+            <img src="assets/images/Frame 1261158344.png" alt="live icon" class="live-icon" />
+          </div>
+        </div>
+        <div class="speaker-details">
+          <h3>{{ speaker.name }}</h3>
+          <p>{{ speaker.specialization }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<app-section-component class="align-header"
+  title="Webinars based on cardiology"
+  viewAllLink="/cardiology-webinars"
+  viewAllText="View all">
+</app-section-component>
+
+<section class="webinars-section align-section">
+  <div class="webinars-grid">
+    <app-main-component 
+      *ngFor="let webinar of webinars"
+      [webinar]="webinar"
+      type="live">
+    </app-main-component>
+  </div>
+</section>

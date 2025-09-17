@@ -1,0 +1,14 @@
+<app-section-component class="align-header"
+  title="Browse by topic" 
+  viewAllLink="/Browse-by-topic" 
+  viewAllText="View all">
+</app-section-component>
+<div class="webinars-section align-section">
+    <div class="browse-topics-container">
+        <div class="topics-list">
+            <div class="topic-tag" *ngFor="let topic of topics">
+                <span>{{ topic.name }}</span><span class="count">{{ topic.count }}</span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="filter-container">
+  <div class="filter-section">
+    <div class="section-header" style="display: flex;">
+      <span class="section-title">Specialty</span>
+      <span class="arrow"><img src="assets/images/up-arrow.png"></span>
+    </div>
+    <div class="section-content">
+      <div class="search-box">
+        <img src="assets/images/Search.png" class="search-icon">
+        <input type="text" class="form-control search-input" placeholder="Search">
+      </div>
+      <div class="checkbox-list">
+        <label class="checkbox-item"><input type="checkbox"> Accupunture</label>
+        <label class="checkbox-item"><input type="checkbox"> Allergy and Immunology</label>
+        <label class="checkbox-item"><input type="checkbox"> Anaesthesiology</label>
+        <label class="checkbox-item"><input type="checkbox"> Clinical Nutrition</label>
+        <label class="checkbox-item"><input type="checkbox"> General Practitioner</label>
+      </div>
+    </div>
+  </div>
+  <div class="filter-section" *ngFor="let section of filterSections">
+    <div class="section-header">
+      <span class="section-title">{{ section.title }}</span>
+      <span class="arrow">
+        <img [src]="section.arrow" alt="arrow">
+      </span>
+    </div>
+  </div>
+</div>

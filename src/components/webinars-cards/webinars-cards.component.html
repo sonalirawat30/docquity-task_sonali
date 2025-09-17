@@ -1,0 +1,68 @@
+<div class="webinar-cards-list">
+  <div class="webinar-card" *ngFor="let webinar of webinars">
+    <div class="card-header">
+      <div class="sponsor-info">
+        <h4>{{ webinar?.sponsor }}</h4>
+        <p>Sponsored by Roche</p>
+        <span>{{ webinar?.sponsorFollowers }} followers . {{ webinar?.timeAgo }}</span>
+      </div>
+      <div class="card-actions">
+        <a style="color: #2F80ED"><span class="plus-icon">+</span>
+          <span class="post-text">Follow</span></a>
+        <span class="dots"><img src="assets/images/Vector1.png"></span>
+      </div>
+    </div>
+    <div class="webinars-grid">
+      <article>
+        <div class="card-thumbnail">
+          <img [src]="webinar.image" [alt]="webinar.title">
+        </div>
+
+        <div class="card-content">
+          <div class="credits-info">
+            <span class="credits"><img src="assets/images/Frame 48100047.png" alt="credit"> {{ webinar.credit }}
+              <span class="expiration-badge" *ngIf="webinar.expiration">
+                ({{ webinar.expiration }})
+              </span></span>
+          </div>
+          <h3 class="card-title">{{ webinar.title }}</h3>
+
+          <div class="key-highlights">
+            <h4>KEY HIGHLIGHTS</h4>
+            <p>{{ webinar.keyHighlights }}</p>
+          </div>
+        </div>
+        <hr>
+        <div class="card-webinar">
+          <div class="social-status">
+            <span>{{ webinar?.likes }} Likes</span>
+            <span>• {{ webinar?.comments }} Comments</span>
+            <span style="align-items: right;">{{ webinar?.views }} Views</span>
+          </div>
+        </div>
+        <hr>
+        <div class="card-webinar">
+          <div class="social-status">
+            <div class="social-item">
+              <img  src="assets/images/like.png" alt="Like">
+              <span>Like</span>
+            </div>
+            <div class="social-item">
+              <img src="assets/images/Rectangle 26890 (Stroke).png" alt="Comment">
+              <span>Comment</span>
+            </div>
+            <div class="social-item">
+              <img src="assets/images/Mask group.png" alt="Repost">
+              <span>Repost</span>
+            </div>
+            <div class="social-item">
+              <img src="assets/images/Forward.png" alt="Share">
+              <span>Share</span>
+            </div>
+          </div>
+        </div>
+
+      </article>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+<article class="webinar-card">
+    <div class="card-thumbnail">
+        <img [src]="webinar.imageUrl" [alt]="webinar.title">
+
+        <div class="thumbnail-overlay top" *ngIf="webinar.showExtraIcons || webinar.showLiveButton">
+            <div class="top-left-badges">
+                <span class="live-badge">
+                    <img src="assets/images/Group 1171282398.png" alt="Live">
+                </span>
+                <span class="viewers-badge">
+                    <img src="assets/images/People.svg" alt="Viewers"> 200+
+                </span>
+            </div>
+            <div class="extra-icons-container">
+                <div class="extra-icons">
+                    <img class="cc-icon" src="assets/images/cc.png" alt="CC">
+                </div>
+                <div class="extra-icons">
+                    <img src="assets/images/Mute.svg" alt="Mute">
+                </div>
+            </div>
+        </div>
+
+        <div class="thumbnail-overlay bottom">
+            <span class="duration-badge">{{ webinar.duration }}</span>
+        </div>
+    </div>
+
+    <div class="card-content">
+        <div class="credits-info">
+            <span class="credits">
+                <img src="assets/images/Frame 48100047.png" alt="credit">
+                {{ webinar.credits }}
+                <span class="expiration-badge" *ngIf="webinar.expiration">
+                    ({{ webinar.expiration }})
+                </span>
+            </span>
+        </div>
+        <h3 class="card-title">{{ webinar.title }}</h3>
+        <div class="organization-info">
+            <img [src]="webinar.orgLogoUrl" [alt]="webinar.organization" class="org-logo">
+            <p>{{ webinar.organization }}</p>
+        </div>
+        <div class="key-highlights">
+            <img *ngIf="webinar.guideline=='RELATED GUIDELINE'" src="assets/images/Mask group1.png" alt="guideline image" class="highlight-image">
+            <div class="highlight-text">
+                <h4>{{ webinar.guideline }}</h4>
+                <p>{{ webinar.highlight }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="webinar.showWatch">
+        <a href="#" class="watch-now-btn">Watch now</a>
+    </div>
+
+    <div class="card-footer" *ngIf="webinar.showNotify">
+        <div class="live-info">
+            <p class="live-info-label">Goes live on</p>
+            <p class="live-info-date">{{ webinar.liveDate }}</p>
+        </div>
+        <button class="notify-btn"> <span><img class="bellNotify" src="assets/images/Bell.png" alt="bell"></span>Notify
+            me</button>
+    </div>
+</article>

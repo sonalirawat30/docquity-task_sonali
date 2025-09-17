@@ -1,0 +1,139 @@
+.speakers-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.align-header {
+  position: relative;
+  top: -200px;
+}
+.align-section {
+  position: relative;
+  top: -160px;
+}
+
+.speakers-list::-webkit-scrollbar {
+  display: none;
+}
+
+.speaker-card {
+  flex: 0 0 200px;
+  background: linear-gradient(to bottom, #f5e2d5 10%, #FFFFFF 40%),
+              linear-gradient(to right, #f5e2d5 10%, #FFFFFF 40%);
+  border-radius: 12px;
+  height: 184px;
+  padding: 10px;
+  border: 1px solid #EEEEEE;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.speaker-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.profile-pic-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.profile-pic-container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e0e0e0;
+}
+
+.speaker-card.live .profile-pic-container>img {
+  border-color: #ff4d4f;
+}
+
+.live-badges {
+  position: absolute;
+  bottom: 0.2px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background-color: #FFF0F0;
+  border-radius: 20px;
+  padding: 3px 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #D92D20;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  border: 1px solid #FFEBEB;
+}
+
+.live-badges .live-icon {
+  width: 55px;
+  height: 14px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 0;
+}
+
+.speaker-details h3 {
+  font-size: 1rem;
+  margin: 0 0 5px;
+  color: #333;
+  font-weight: 600;
+}
+
+.speaker-details p {
+  font-size: 0.8rem;
+  margin: 0;
+  color: #888;
+}
+
+@media (max-width: 992px) {
+  .speaker-card {
+    flex: 0 0 180px;
+    height: 170px;
+  }
+
+  .profile-pic-container img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .speaker-details h3 {
+    font-size: 0.95rem;
+  }
+
+  .speaker-details p {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .speaker-card {
+    flex: 0 0 150px;
+    height: 150px;
+  }
+
+  .profile-pic-container img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .speaker-details h3 {
+    font-size: 0.85rem;
+  }
+
+  .speaker-details p {
+    font-size: 0.7rem;
+  }
+}

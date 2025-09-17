@@ -1,0 +1,25 @@
+<header class="" style="margin-top: 25px;">
+    <div class="mobile-header-elements">
+        <img src="assets/images/Arrow.png" alt="Back" class="back-arrow">
+        <span>Webinar</span>
+        <div class="mobile-filter-icons">
+            <img src="assets/images/Search.png" alt="Search" class="search-icon">
+            <img src="assets/images/filter.png" alt="Filter" class="filter-icon">
+        </div>
+    </div>
+    
+    <div class="tablet-desktop-header-elements">
+        <h2 style="font-size: 25px;">Webinar</h2>
+        <div class="tablet-filter-icon">
+            <img src="assets/images/filter.png" alt="Filter" class="filter-icon">
+        </div>
+    </div>
+    <nav class="header-tabs">
+        <ul>
+            <li><a [class.active]="activeTab==='forYou'" (click)="setActive('forYou')">For you</a></li>
+            <li><a [class.active]="activeTab==='live'" (click)="setActive('live')">Live</a></li>
+            <li><a [class.active]="activeTab==='upcoming'" (click)="setActive('upcoming')">Upcoming</a></li>
+        </ul>
+    </nav>
+    <hr>
+</header>

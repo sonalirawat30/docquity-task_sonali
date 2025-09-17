@@ -1,0 +1,22 @@
+@media (max-width: 768px) {
+    .header-align {
+        margin-top: 0;
+    }
+}
+@media (min-width: 992px) {
+    .align-header {
+        top: -70px;
+        position: relative;
+    }
+}
+
+@media (max-width: 1024px) {
+      .align-header {
+        top: 20px;
+        position: relative;
+    }
+        .align-section {
+        top: 70px;
+        position: relative;
+    }
+}
